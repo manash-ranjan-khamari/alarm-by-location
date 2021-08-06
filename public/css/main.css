@@ -7,10 +7,6 @@
     margin-top: 60px;
 }
 
-.mg10 {
-    margin-bottom: 1rem;
-}
-
 input {
     background-color: #fff;
     font-size: 1rem;
@@ -27,4 +23,12 @@ button {
     padding: .65rem;
     min-width: 1rem;
     width: 8rem;
+}
+
+.mg10 {
+    margin-bottom: 1rem;
+}
+
+.error {
+    color: red;
 }
