@@ -1,0 +1,30 @@
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+
+.mg10 {
+    margin-bottom: 1rem;
+}
+
+input {
+    background-color: #fff;
+    font-size: 1rem;
+    border-radius: .75rem;
+    border: 1px solid #ddd;
+    height: 2.75rem;
+    padding: 0.5rem;
+    width: 25rem;
+}
+
+button {
+    box-shadow: 0 3px 12px rgb(0 0 0 / 15%);
+    border-radius: 1.618rem;
+    padding: .65rem;
+    min-width: 1rem;
+    width: 8rem;
+}

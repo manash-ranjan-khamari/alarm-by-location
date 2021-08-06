@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome to Calipsa></title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+        <meta name="background-color" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="DESCRIPTION" content="Test Calipsa Application"/>
+        <link rel="stylesheet" href="./css/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div id="app"> 
+            <header-component></header-component>
+            <h1>{{ headerMessage }}</h1>
+            <div class="mg10">
+                <input v-model="startDateTime" type="text" placeholder="Start DateTime YYYY-MM-DD HH:MM:SS"/>
+                <input v-model="endDateTime" type="text" placeholder="End DateTime YYYY-MM-DD HH:MM:SS"/>
+                <button type="button" @click="filterData()">Filter</button>
+            </div>
+            <div class="ui container">
+                <vuetable ref="vuetable"
+                    api-url="/api/events"
+                    :fields="fields"
+                    pagination-path=""
+                    @vuetable:pagination-data="onPaginationData"
+                    :per-page=50
+                >
+                <!-- <template slot="actions" scope="props">
+                    <div class="table-button-container">
+                        <button class="ui button" @click="editRow(props.rowData)"><i class="fa fa-edit"></i> Edit</button>&nbsp;&nbsp;
+                        <button class="ui basic red button" @click="deleteRow(props.rowData)"><i class="fa fa-remove"></i> Delete</button>&nbsp;&nbsp;
+                    </div>
+                </template> -->
+                </vuetable>
+                <vuetable-pagination ref="pagination"
+                    @vuetable-pagination:change-page="onChangePage"
+                ></vuetable-pagination>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js" defer></script>
+        <script src="https://unpkg.com/vuetable-2@1.6.0" defer></script>
+        <script src="./js/main.js" type="text/javascript" defer></script>
+    </body>
+</html>
