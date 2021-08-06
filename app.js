@@ -3,7 +3,7 @@ const config = require('./config/appconfig.js');
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
-const stream = fs.createWriteStream(path.join(`${__dirname}/log`, 'access.log'), { flags: 'a' })
+const stream = fs.createWriteStream(path.join(`${__dirname}/log`, 'access.log'), { flags: 'a+' })
 
 const app = express();
 const port = config.port;
