@@ -21,23 +21,17 @@ Application Code Structure
     - Dev Dependency
         - Mocha, Chai & Supertest
     - NPM Dependency
-        - MySql, Express, Express validator
+        - Mongodb, Express, Express validator
 - routes
     - contains all application routes
 - app.js
     - Main file which kickstarts the application
 
-Application Information
+- Application Information
     - Application Code flow
-        - All opeeration will happen in the tables
+        - All opeeration will happen in the mongo collections
     - How to Run
-        - Update the database info in the config & run `npm start` to kickstart the application
+        - Run `npm start` to kickstart the application
     - Unit Testing
-        - It created a table on the fly
-        - And all the CRUD operation & testing happens in those table
-        - I am not deleting the table(s) for now, so that someone can see the test case execution in the table
-        - In a real world application, we can delete the table
-        - Also can have the unit test run on pre-commit hook, so that no bad code can go w/o passing the unit-testing audit
-
-Postman Collection
-- https://www.getpostman.com/collections/7411f0f8b41a4b714d60
+        - Added just a sample unit test for review
+        - Also we can have the unit test run on pre-commit hook, so that no bad code can go w/o passing the unit-testing audit
