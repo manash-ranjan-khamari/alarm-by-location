@@ -3,6 +3,5 @@ module.exports = (req, res, next) => {
         - Like we can may be restrict by IP location & we can check req header to get the IP & check that
         - Or else let's say retrict for certain userAgent or so
     */
-    console.log(req, res, next);
     next();
 };
